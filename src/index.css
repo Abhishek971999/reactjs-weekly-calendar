@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background: #ffffff;
+  margin-top: 20px;
+}
+
+.header {
+  color: #182a88;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  width: 100%;
+}
+
+.weekdays,
+.dates {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.weekdays p {
+  flex: 1;
+  color: #182a88;
+  text-align: center;
+}
+
+.dates p {
+  flex-shrink: 0;
+  background: #ffc2cf;
+  margin: 2px 20px 0 0;
+  padding: 20px 4px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 400;
+  flex-basis: 10%;
+}
+
+.selected {
+  background: #182a88 !important;
+  color: #fff;
+}
+
+button {
+  background: #eff0f7;
+  border: none;
+  outline: none;
+  padding: 4px 10px;
+  border-radius: 50%;
+}
+
+.day {
+  cursor: pointer;
+}
