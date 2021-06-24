@@ -1,5 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
 import { weekdays, months } from "./constants";
+import {convert,formatUnix} from "../../utils/unixFormatter"
 const Calendar = () => {
   //State for selected Date
   const [selectedDate, setSelectedDate] = useState(null);
@@ -9,6 +10,11 @@ const Calendar = () => {
   const [weeks, setWeeks] = useState([]);
   //State for storing current week values
   const [currentWeek, setCurrentWeek] = useState({});
+  //State for formatted unix data
+  const [formattedUnix, setFormattedUnix] = useState([]);
+  //State for events
+  const [events,setEvents] = useState([])
+
 
   //Function to get dates for next 6 weeks and format and push them to weeks array
   const getDates = () => {
@@ -40,13 +46,30 @@ const Calendar = () => {
     setWeeks(res);
   };
 
+  //Set Date
+  const setDate = ()=>{
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
+    let yyyy = today.getFullYear();
+    setSelectedDate(`${yyyy}-${mm}-${dd}`)
+    const unix = convert(yyyy,mm,dd)
+    const eventData = formattedUnix && formattedUnix.length>0 && formattedUnix.filter(el=>(el?.date/1000000)==unix)
+    setEvents(eventData)
+  }
   useEffect(() => {
+    setFormattedUnix(formatUnix())
     getDates();
   }, []);
+
+  useEffect(() => {
+    setDate()
+  }, [formattedUnix]);
 
   //Change the current week.
   const handeClick = (direction) => {
     setSelectedDate(null);
+    setEvents([])
     if (direction == "next" && weekno < 5) {
       setCurrentWeek(weeks[weekno + 1]);
       setWeekNo((prevState) => prevState + 1);
@@ -57,6 +80,15 @@ const Calendar = () => {
     }
   };
 
+  //Show events 
+  const handleSelectDate = (day) =>{
+    setSelectedDate(day)
+    const date = day.split("-")
+    const unix = convert(date[0],date[1],date[2])
+    const eventData = formattedUnix && formattedUnix.length>0 && formattedUnix.filter(el=>(el?.date/1000000)==unix)
+    setEvents(eventData)
+  }
+
   //Format dates and print
   const dates =
     currentWeek &&
@@ -64,9 +96,9 @@ const Calendar = () => {
     currentWeek?.week.map((day) => {
       let className = "";
       let d = day.split("-")[2];
-      if (d == selectedDate) className += "selected";
+      if (day == selectedDate) className += "selected";
       return (
-        <p className={`day ${className}`} onClick={() => setSelectedDate(d)}>
+        <p className={`day ${className}`} onClick={() => handleSelectDate(day)}>
           {d}
         </p>
       );
@@ -122,6 +154,11 @@ const Calendar = () => {
                 </button>
               </div>
             </div>
+          </div>
+          <div className="col-sm-12 col-md-4 col-lg-6">
+            <h6>Events will be listed here</h6>
+            {events && events.length==0 && (<p>NO EVENTS</p>)}
+            {events && events.length>0 && events[0].events.map(ev=><p>Mood : {ev.mood}</p>)}
           </div>
         </div>
       </div>

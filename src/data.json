@@ -1,0 +1,207 @@
+[
+  {
+    "activities": ["Cooking"],
+    "date": {
+      "time": 1624430814
+    },
+    "mood": 4,
+    "negativeEmotions": ["Afraid"],
+    "positiveEmotions": ["Grateful"]
+  },
+  {
+    "activities": ["Cooking"],
+    "date": {
+      "time": 1624430822
+    },
+    "mood": 5,
+    "negativeEmotions": ["Upset"]
+  },
+  {
+    "activities": ["Cooking", "Cleaning", "Meditating"],
+    "date": {
+      "time": 1624430832
+    },
+    "mood": 3,
+    "negativeEmotions": ["Afraid"]
+  },
+  {
+    "activities": ["Movies"],
+    "date": {
+      "time": 1624430907
+    },
+    "mood": 1,
+    "negativeEmotions": ["Lonely"]
+  },
+  {
+    "date": {
+      "time": 1624527495
+    },
+    "mood": 4,
+    "positiveEmotions": ["Grateful"]
+  },
+  {
+    "activities": ["Reading"],
+    "date": {
+      "time": 1624534213
+    },
+    "mood": 5,
+    "positiveEmotions": ["Proud", "Happy"]
+  },
+  {
+    "date": {
+      "time": 1624620607
+    },
+    "mood": 3,
+    "positiveEmotions": ["Optimistic"]
+  },
+  {
+    "activities": ["Meditating"],
+    "date": {
+      "time": 1624624332
+    },
+    "mood": 5,
+    "positiveEmotions": ["Calm", "Happy", "Confident"]
+  },
+  {
+    "date": {
+      "time": 1624699926
+    },
+    "mood": 1,
+    "negativeEmotions": ["Disappointed"]
+  },
+  {
+    "date": {
+      "time": 1624714328
+    },
+    "mood": 2,
+    "negativeEmotions": ["Angry"]
+  },
+  {
+    "date": {
+      "time": 1624973532
+    },
+    "mood": 5,
+    "positiveEmotions": ["Hopeful"]
+  },
+  {
+    "date": {
+      "time": 1625059924
+    },
+    "mood": 5,
+    "positiveEmotions": ["Happy"]
+  },
+  {
+    "date": {
+      "time": 1625232725
+    },
+    "mood": 4,
+    "positiveEmotions": ["Hopeful"]
+  },
+  {
+    "activities": ["Exercise"],
+    "date": {
+      "time": 1625295492
+    },
+    "mood": 4,
+    "positiveEmotions": ["Excited"]
+  },
+  {
+    "activities": ["Exercise"],
+    "date": {
+      "time": 1625302687
+    },
+    "mood": 5,
+    "positiveEmotions": ["Happy", "Proud"]
+  },
+  {
+    "date": {
+      "time": 1625561887
+    },
+    "mood": 2,
+    "negativeEmotions": ["Sad"]
+  },
+  {
+    "date": {
+      "time": 1625652005
+    },
+    "mood": 3,
+    "positiveEmotions": ["Grateful"]
+  },
+  {
+    "date": {
+      "time": 1625738404
+    },
+    "mood": 4,
+    "negativeEmotions": ["Afraid"]
+  },
+  {
+    "date": {
+      "time": 1625822709
+    },
+    "mood": 5,
+    "positiveEmotions": ["Hopeful"]
+  },
+  {
+    "date": {
+      "time": 1625822722
+    },
+    "mood": 3,
+    "negativeEmotions": ["Afraid"]
+  },
+  {
+    "activities": ["Meditating"],
+    "date": {
+      "time": 1626254705
+    },
+    "mood": 5,
+    "negativeEmotions": ["Lonely"],
+    "positiveEmotions": ["Grateful"]
+  },
+  {
+    "activities": ["Date"],
+    "date": {
+      "time": 1626258306
+    },
+    "mood": 4,
+    "positiveEmotions": ["Grateful", "Calm", "Content"]
+  },
+  {
+    "activities": ["Cooking"],
+    "date": {
+      "time": 1626262267
+    },
+    "mood": 5,
+    "positiveEmotions": ["Grateful"]
+  },
+  {
+    "activities": ["Cooking"],
+    "date": {
+      "time": 1626270373
+    },
+    "mood": 4,
+    "positiveEmotions": ["Grateful"]
+  },
+  {
+    "activities": ["Social Media"],
+    "date": {
+      "time": 1626270424
+    },
+    "mood": 4,
+    "positiveEmotions": ["Grateful"]
+  },
+  {
+    "date": {
+      "time": 1626274143
+    },
+    "mood": 5,
+    "negativeEmotions": ["Lonely"]
+  },
+  {
+    "activities": ["Movies"],
+    "date": {
+      "time": 1626274155
+    },
+    "mood": 4,
+    "positiveEmotions": ["Hopeful"]
+  }
+]
