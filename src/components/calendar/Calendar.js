@@ -23,7 +23,7 @@ const Calendar = () => {
     let res = [];
     let months = [];
     let year = "";
-    for (let j = 1; j <= 6; j++) {
+    for (let j = 1; j <= 7; j++) {
       for (let i = 1; i <= 7; i++) {
         let first = curr.getDate() - curr.getDay() + i;
         let day = new Date(curr.setDate(first)).toISOString().slice(0, 10);
@@ -42,6 +42,7 @@ const Calendar = () => {
       year = "";
       res.push(resObject);
     }
+    res = res.slice(1)
     setCurrentWeek(res[0]);
     setWeeks(res);
   };
